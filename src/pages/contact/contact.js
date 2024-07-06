@@ -1,0 +1,90 @@
+import React from "react";
+// import map from '../img/map.png';
+import LocationMap from "../../components/location/location";
+
+const Contact = React.forwardRef ((props, ref) => {
+  
+    return (
+        <>
+            <section className="contact-us" id="contact" ref={ref}>
+                <h3 className="heading-tertiary u-margin-bottom-small">Contact Us</h3>
+                <div className="contact-us__container">
+                <div className="contact-us__left">
+                    <h2 className="heading-secondary u-margin-bottom-small">Get in touch</h2>
+                    <p className="paragraph u-margin-bottom-mid">
+                    Your success is our priority. We thrive on building lasting relationships with clients who share our passion for growth and innovation. Get in touch to explore how we can help you achieve your long-term goals.
+                    </p>
+
+                    <div className="contact-us__inner-content-box">
+                    <h3 className="contact-us__title u-margin-bottom-small">
+                        <span className="contact-us__icon-box">
+                        <svg width="35" height="35" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 4.375C17.5136 4.375 15.129 5.36272 13.3709 7.12087C11.6127 8.87903 10.625 11.2636 10.625 13.75C10.625 18.9288 20 36.4 20 36.4C20 36.4 29.375 18.93 29.375 13.75C29.375 11.2636 28.3873 8.87903 26.6291 7.12087C24.871 5.36272 22.4864 4.375 20 4.375ZM20 18.23C18.8118 18.23 17.6723 17.758 16.8322 16.9178C15.992 16.0777 15.52 14.9382 15.52 13.75C15.52 12.5618 15.992 11.4223 16.8322 10.5822C17.6723 9.742 18.8118 9.27 20 9.27C21.1882 9.27 22.3277 9.742 23.1678 10.5822C24.008 11.4223 24.48 12.5618 24.48 13.75C24.48 14.9382 24.008 16.0777 23.1678 16.9178C22.3277 17.758 21.1882 18.23 20 18.23Z" fill="#6B0D78" fillOpacity="0.811765"/>
+                        </svg>
+
+                        </span>
+                        Visit us personally
+                    </h3>
+                    <p className="paragraph u-margin-bottom-small">
+                     8 Buiten Street, Cape Town, South Africa 8001.
+                    </p>
+
+                    <div className="contact-us__img-box">
+                        < LocationMap className="contact-us__img" />
+                    </div>
+                    </div>
+                </div>
+
+                <div className="contact-us__right">
+                    <form action="#" className="contact-us__form form">
+                    <div className="form__col form__col--1 u-margin-bottom-small">
+                        <div className="form__group">
+                        <label htmlFor="name" className="form__label">Name</label>
+                        <input
+                            className="form__input"
+                            type="name"
+                            name="name"
+                            id="name"
+                            placeholder="John Doe"
+                            autoComplete="off"
+                            required
+                        />
+                        </div>
+
+                        <div className="form__group">
+                        <label htmlFor="contact-email" className="form__label">Email</label>
+                        <input
+                            className="form__input"
+                            type="email"
+                            name="contact-email"
+                            id="contact-email"
+                            placeholder="doejohn@example.com"
+                            autoComplete="off"
+                            required
+                        />
+                        </div>
+                    </div>
+
+                    <div className="form__col form__col--2 u-margin-bottom-mid">
+                        <div className="form__group">
+                        <label htmlFor="message" className="form__label">Message</label>
+                        <textarea
+                            name="message"
+                            id="message"
+                            className="form__textarea"
+                            required
+                            placeholder="Say Something..."
+                        ></textarea>
+                        </div>
+                    </div>
+
+                    <button className="btn btn--green">Send us a message</button>
+                    </form>
+                </div>
+                </div>
+            </section>
+        </>
+    );
+});
+
+export default Contact;
