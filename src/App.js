@@ -7,6 +7,7 @@ import Services from './pages/services/services';
 import Contact from './pages/contact/contact';
 import Footer from './components/footer/footer';
 import './sass/main.scss';
+// import Privacy from './pages/privacy/privacy';
 
 const App = () => {
   const homeRef = useRef(null);
@@ -44,6 +45,7 @@ const App = () => {
               <Contact ref={contactRef} />
             </>
           } />
+           {/* <Route path="/privacy-policy" component={Privacy} /> */}
         </Routes>
         <Footer />
       </div>

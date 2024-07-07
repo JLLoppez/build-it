@@ -5,7 +5,7 @@ const NavBar = ({ homeRef, aboutRef, servicesRef, contactRef, galleryRef, projec
   
   const handleScroll = (ref) => {
     ref.current.scrollIntoView({ behavior: 'smooth' });
-    onclose();
+    onClose();
   };
 
   return (

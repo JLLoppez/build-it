@@ -1,8 +1,12 @@
 import React from "react";
-
+import {useNavigate } from 'react-router-dom';
 const Footer = React.forwardRef ((props, ref) => {
     const year = new Date().getFullYear();
-  
+    const navigate = useNavigate();
+
+  const handleButtonClick = () => {
+    navigate('/privacy-policy');
+  };
     return (
         <>
             <footer className="footer">
@@ -38,7 +42,7 @@ const Footer = React.forwardRef ((props, ref) => {
               <a href="/#"  className="footer__link">FAQs</a>
             </li>
             <li className="#footer__item">
-              <a href="/#" className="footer__link">Privacy Policy</a>
+              <span className="footer__link" onClick={handleButtonClick}>Privacy Policy</span>
             </li>
             <li className="footer__item">
               <a href="/#"  className="footer__link">Terms of Operation</a>
